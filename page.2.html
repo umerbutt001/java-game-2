@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="index.html">1st game</a> 
+    <br>
+    <br>
+
+    <h1 style="text-align: center; font-size: 100px;">Did you enjoy the game ??</h1>
+    
+
+    <script>
+
+
+
+alert('"Welcome to the new game! \n "iss game ma apko 6 attemps milangi apko 4 ka sahi jawab dana hoga apko 5 options milanga or kuch nmb ki range milani " initial to final" or mana picha secretly aik nmb assign kiya howa hai jo apko nhi pata ab apko sirf guess karna hoga jo mana 5 alag alag nmb asign kiya hai wo kis kis range ma atay hai ')
+
+alert("I have assigned a number between 1 and 100. You need to guess which range it falls into. Here are your 5 options: ");
+
+    var ranges = [
+    { min: 1, max: 20 },
+    { min: 21, max: 40 },
+    { min: 41, max: 60 },
+    { min: 61, max: 80 },
+    { min: 81, max: 100 }
+    ];
+
+var secretNumbers = [15, 95, 82 , 72, 85, 39];  
+var correctAnswers = 0;  
+var totalRounds = secretNumbers.length;  
+
+
+for (var i = 0; i < totalRounds; i++) {
+    var secretNumber = secretNumbers[i];
+
+    
+    var correctRange = "";
+    for (var j = 0; j < ranges.length; j++) {
+        if (secretNumber >= ranges[j].min && secretNumber <= ranges[j].max) {
+            correctRange = `${ranges[j].min} to ${ranges[j].max}`;
+            break;
+        }
+    }
+
+    
+    var userGuess = prompt(`Round ${i + 1}: Which range does the secret number fall into?\n1) 1 to 20\n2) 21 to 40\n3) 41 to 60\n4) 61 to 80\n5) 81 to 100`);
+
+   
+    if (
+        (userGuess == 1 && correctRange == "1 to 20") ||
+        (userGuess == 2 && correctRange == "21 to 40") ||
+        (userGuess == 3 && correctRange == "41 to 60") ||
+        (userGuess == 4 && correctRange == "61 to 80") ||
+        (userGuess == 5 && correctRange == "81 to 100")
+    ) {
+        alert("Congratulations! 🎉 You guessed the correct range.");
+        correctAnswers++;  
+    } else {
+        alert(`Oops! 🤭 You guessed wrong. The secret number was in the range ${correctRange}.`);
+    }
+}
+
+
+if (correctAnswers >= 4) {
+    alert(`Congratulations 🎉! You won 😉! You got ${correctAttempts} out of 6 attempts correct.`);
+} else {
+    alert(`oohoo 🤭! You lost. 😞 You only got ${correctAnswers} out of 6 correct.`);
+}
+
+
+
+
+
+    </script>
+</body>
+</html>
