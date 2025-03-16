@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 style="text-align: center; font-size: 100px;">Did you enjoy the game ??</h1>
+    
+
+
+    <script>
+
+    
+
+
+    alert ("Welcome to the new game! \n Iss game mein, aapko ek number enter karna hoga. Maine server par kuch numbers already daale hain. Aapko aisa number dalna hoga jo mere daale gaye numbers ke beech mein ho. Aapki asaani ke liye, main aapko hints bhi dunga. Aapko 6 attempts milenge, aur aapko kam se kam 4 sahi answers dene honge.'");
+
+    var correctAttempts = 0;  
+
+    for (var i = 0; i < 6; i++) {  
+
+    var nmb = prompt("Enter a number, any number from 1 to 100.");
+    
+    
+    if (nmb >= 30 && nmb <= 60){
+
+        alert("oohh 😊 write 'Now, second chance.'");
+        correctAttempts++; 
+    }
+     else {
+        alert("wrong 😂 Now, second chance.");
+    }
+
+    var nmb = prompt("Enter a number, any number from 90 to 200.");
+
+    if (nmb >= 120 && nmb <= 150){
+
+    alert("oohh 😊 write 'Now, third chance.'");
+    correctAttempts++; 
+    }
+    else {
+    alert("wrong 😂 Now, third chance.");
+    }
+
+    var nmb = prompt("Enter a number, any number from 280 to 390.");
+
+    if (nmb >= 340 && nmb <= 360){
+
+    alert("oohh 😊 write 'Now, fourth chance.'");
+    correctAttempts++; 
+    }
+    else {
+    alert("wrong 😂 Now, fourth chance.");
+    }
+
+    var nmb = prompt("Enter a number, any number from 200 to 300.");
+
+    if (nmb >= 240 && nmb <= 260){
+
+    alert("oohh 😊 write 'Now, fifth chance.'");
+    correctAttempts++; 
+    }
+    else {
+    alert("wrong 😂 Now, fifth chance.");
+    }
+
+    var nmb = prompt("Enter a number, any number from 480 to 600.");
+
+    if (nmb >= 525 && nmb <= 555){
+
+    alert("oohh 😊 write 'Now, sixth chance.'");
+    correctAttempts++; 
+    }
+    else {
+    alert("wrong 😂 Now, sixth chance.");
+    }
+
+    var nmb = prompt("Enter a number, any number from 850 to 950.");
+
+    if (nmb >= 870 && nmb <= 900){
+
+    alert("oohh 😊 write");
+    correctAttempts++; 
+    }
+    else {
+    alert("wrong 😂 ");
+    }
+
+    
+    if (correctAttempts >= 4) {
+        alert(`Congratulations 🎉! You won 😉! You got ${correctAttempts} out of 6 attempts correct.`);
+        break
+        } 
+        
+        else {
+        alert(`Sorry! You lost 🤣😆😜. You got only ${correctAttempts} out of 6 attempts correct.`);
+        
+        break
+        }
+
+        
+
+    }
+    
+
+
+
+
+    </script>
+</body>
+</html>
